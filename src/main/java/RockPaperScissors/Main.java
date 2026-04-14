@@ -28,7 +28,7 @@ public class Main {
                     return "comp won";
                 } else return "draw";
             case "Paper":
-                if (compThrow == "Rock") {
+                if (compThrow.equals("Rock")) {
                     return "user won";
                 } else if (compThrow.equals("Scissors")) {
                     return "comp won";
