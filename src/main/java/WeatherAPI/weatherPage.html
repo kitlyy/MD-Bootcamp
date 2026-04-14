@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🌤 Weather Checker</h1>
+
+    <form class="search" onsubmit="event.preventDefault(); getWeatherData();">
+        <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name (e.g. London)"
+                required
+        />
+        <button type="submit">
+            Search
+        </button>
+    </form>
+
+    <div id="statusMessage"></div>
+
+    <h2>Hourly Forecast</h2>
+
+    <div class="table-container">
+        <table id="weatherTable">
+            <thead>
+            <tr>
+                <th>Date & Time</th>
+                <th>Temperature</th>
+            </tr>
+            </thead>
+            <tbody id="weatherBody">
+            <tr>
+                <td colspan="2" class="empty">
+                    Search for a city to see the weather
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button
+            id="toggleWeather"
+            type="button"
+            style="display:none;"
+    >
+        Show more
+    </button>
+
+</div>
+
+<script src="apiCall.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* ---------- Reset & Base ---------- */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #1f2933;
+}
+
+/* ---------- Card ---------- */
+.card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h1 {
+    margin: 0 0 1.5rem;
+    text-align: center;
+    font-size: 1.75rem;
+    color: #111827;
+}
+
+/* ---------- Search ---------- */
+.search {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.search input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+}
+
+.search input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.search button {
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.search button:hover {
+    background: #1d4ed8;
+}
+
+.search button:active {
+    transform: translateY(1px);
+}
+
+/* ---------- Status Messages ---------- */
+#statusMessage {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    min-height: 1.25rem;
+    font-weight: 500;
+}
+
+.error { color: #dc2626; }
+.loading { color: #2563eb; }
+
+/* ---------- Table ---------- */
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #111827;
+}
+
+.table-container {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f3f4f6;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+td {
+    font-size: 0.95rem;
+    color: #1f2937;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------- Empty state ---------- */
+.empty {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* ---------- Toggle Button ---------- */
+#toggleWeather {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    border-radius: 10px;
+    color: #374151;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#toggleWeather:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
