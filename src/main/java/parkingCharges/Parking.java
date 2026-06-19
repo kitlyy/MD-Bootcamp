@@ -1,8 +1,6 @@
 package parkingCharges;
 
-import java.util.*;
-import static java.util.Map.entry;
-import java.lang.classfile.Signature;
+
 
 public class Parking {
     static void main(String[] args) {

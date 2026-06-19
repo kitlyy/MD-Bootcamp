@@ -3,6 +3,8 @@ package fizzbuzz;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class FizzBuzzTest {
@@ -10,86 +12,131 @@ class FizzBuzzTest {
     class SingleFizz {
         @Test
         void testReturnsTrueFor3() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "Fizz ";
+            //ACT
             String result = fb.getFizzBuzz(3, 3);
-            assertEquals("Fizz ", result);
+            //ASSERT
+            assertEquals(expected, result);
         }
 
         @Test
         void testReturnsTrueFor6() {
             FizzBuzz fb = new FizzBuzz();
+            String expected = "Fizz ";
+
             String result = fb.getFizzBuzz(6, 6);
-            assertEquals("Fizz ", result);
+
+            assertEquals(expected, result);
         }
 
         @Test
         void testReturnsTrueFor1959() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "Fizz ";
+            //ACT
             String result = fb.getFizzBuzz(1959, 1959);
-            assertEquals("Fizz ", result);
+            //ASSERT
+            assertEquals(expected, result);
         }
     }
     @Nested
     class SingleBuzz {
         @Test
         void testReturnsTrueFor5() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "Buzz ";
+            //ACT
             String result = fb.getFizzBuzz(5,5);
-            assertEquals("Buzz ", result);
+            //ACT
+            assertEquals(expected, result);
         }
         @Test
         void testReturnsTrueFor10() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "Buzz ";
+            //ACT
             String result = fb.getFizzBuzz(10,10);
-            assertEquals("Buzz ", result);
+            //ASSERT
+            assertEquals(expected, result);
         }
         @Test
         void testReturnsTrueFor125() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "Buzz ";
+            //ACT
             String result = fb.getFizzBuzz(125,125);
-            assertEquals("Buzz ", result);
+            //ASSERT
+            assertEquals(expected, result);
         }
     }
     @Nested
     class SingleFizzBuzz {
         @Test
         void testReturnsTrueFor15() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "FizzBuzz ";
             String result = fb.getFizzBuzz(15,15);
-            assertEquals("FizzBuzz ", result);
+            assertEquals(expected, result);
         }
         @Test
         void testReturnsTrueFor30() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "FizzBuzz ";
+            //ACT
             String result = fb.getFizzBuzz(30,30);
-            assertEquals("FizzBuzz ", result);
+            //ASSERT
+            assertEquals(expected, result);
         }
         @Test
         void testReturnsTrueWith12345() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
+            String expected = "FizzBuzz ";
+            //ACT
             String result = fb.getFizzBuzz(12345,12345);
-            assertEquals("FizzBuzz ", result);
+            //ASSERT
+            assertEquals(expected, result);
         }
     }
     @Nested
     class RangeOfNumbers {
         @Test
         void testReturnsTrueFor15() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
-            String result = fb.getFizzBuzz(15,15);
-            assertEquals("FizzBuzz ", result);
+            String expected = "1 2 Fizz 4 Buzz ";
+            //ACT
+            String result = fb.getFizzBuzz(1,5);
+            //ASSERT
+            assertEquals(expected, result);
         }
         @Test
         void testReturnsTrueFor30() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
-            String result = fb.getFizzBuzz(30,30);
-            assertEquals("FizzBuzz ", result);
+            String expected = "Buzz Fizz 7 8 Fizz Buzz ";
+            //ACT
+            String result = fb.getFizzBuzz(5,10);
+            //ASSERT
+            assertEquals(expected, result);
         }
         @Test
         void testReturnsTrueWith12345() {
+            //ARRANGE
             FizzBuzz fb = new FizzBuzz();
-            String result = fb.getFizzBuzz(12345,12345);
-            assertEquals("FizzBuzz ", result);
+            String expected = "Buzz 11 Fizz 13 14 FizzBuzz ";
+            //ACT
+            String result = fb.getFizzBuzz(10,15);
+            //ASSERT
+            assertEquals(expected, result);
         }
     }
 }

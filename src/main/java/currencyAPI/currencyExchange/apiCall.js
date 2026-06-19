@@ -1,5 +1,4 @@
 async function getCurrencyData(targetCurrency) {
-
     const baseCurrency = `GBP`
     const ratesURL = `https://api.frankfurter.dev/v2/rates?base=${baseCurrency}&quotes=${targetCurrency}`
     const rateFetchResults = await fetch(ratesURL);

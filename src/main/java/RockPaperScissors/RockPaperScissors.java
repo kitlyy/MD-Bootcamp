@@ -1,25 +1,21 @@
 package RockPaperScissors;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class RockPaperScissors {
     static void main() {
-        //System.out.println("rock");
 
         List<String> hand = Arrays.asList("Rock", "Paper", "Scissors");
-
+        RockPaperScissors rps = new RockPaperScissors();
         String userThrow = "Rock";
         int randomNum = (int)(Math.random() * 3);
         String compThrow = hand.get(randomNum);
         System.out.println(compThrow);
-        System.out.println(getWinner(userThrow, compThrow));
+        System.out.println(rps.getWinner(userThrow, compThrow));
     }
 
-
-
-    public static String getWinner(String userThrow, String compThrow) {
+    public String getWinner(String userThrow, String compThrow) {
         switch (userThrow) {
             case "Rock":
                 if (compThrow.equals("Scissors")) {

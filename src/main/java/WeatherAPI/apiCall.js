@@ -1,3 +1,5 @@
+
+
 async function getWeatherData() {
     const statusMessage = document.getElementById('statusMessage');
     const weatherBody = document.getElementById("weatherBody");
