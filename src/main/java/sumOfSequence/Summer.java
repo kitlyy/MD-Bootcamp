@@ -12,7 +12,7 @@ public class Summer {
 
     public int getResult(int start, int end, int step){
         int sum = 0;
-        List<Integer> sumList = new ArrayList<Integer>();
+        List<Integer> sumList = new ArrayList<>();
         for (int i = start; i < end + 1; i ++) {
             sumList.add(i);
         }

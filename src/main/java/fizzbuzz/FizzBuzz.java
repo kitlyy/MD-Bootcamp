@@ -10,10 +10,16 @@ public class FizzBuzz {
     public String getFizzBuzz(int start, int end) {
         String result = "";
         for (int i = start; i < end + 1; i++ ) {
-            if (i % 3 == 0 && i % 5 == 0) { result += "FizzBuzz "; }
-            else if (i % 3 == 0) {
+            //extraction
+            // can make the argument that it's not better since there are more lines of code!
+            boolean fizz = i % 3 == 0;
+            boolean buzz = i % 5 == 0;
+            boolean fizzBuzz = i % 3 == 0 && i % 5 == 0;
+
+            if (fizzBuzz) { result += "FizzBuzz "; }
+            else if (fizz) {
                 result += "Fizz ";
-            } else if (i % 5 == 0) {
+            } else if (buzz) {
                 result += "Buzz ";
             } else {
                 result += i + " ";
